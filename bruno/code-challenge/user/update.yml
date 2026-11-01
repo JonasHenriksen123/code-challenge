@@ -1,0 +1,27 @@
+info:
+  name: update
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{connection}}/api/user"
+  body:
+    type: json
+    data: |-
+      {
+        "user": {
+          "id": "01a19272-8e6f-7411-aa2f-0c5cec094a6e",
+          "name": "Jonas Henriksen",
+          "email": "jonas@jonas.dk",
+          "created": "2026-10-31T14:52:23.537Z"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

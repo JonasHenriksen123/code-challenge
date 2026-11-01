@@ -1,28 +1,46 @@
-# Coding Challenge
-This repository contains a list of coding challenges used in the hiring process at Bankdata. As an applicant you can choose to implement one of the challenges or alternatively share some of your existing code.
+# code-challenge
 
-## Existing Code
-Existing code should follow the guidelines:
+This project implements a simple api to handle transfers between accounts. The use case for this is to handle simple banking.
 
-- The code should be available through a public repository
-- Include a README describing the purpose of the code
-- The code should be exclusively or primarily written by you
-  - If this is not the case, the README should explain which parts of the code you are responsible for
+## Stories
+The basic user stories for this project.
 
-## Coding Challenges
-### Requirements
-The solution should reflect what you consider production-ready code, which means the code probably contains at least the following:
+### Create user
 
-- **Architecture**: the solution ideally has a coherent architecture using best practices of software engineering
-- **Tests**: we do not expect complete test coverage, but just some examples of tests that reflect your approach to testing
-- **Documentation**: the README should explain in brief and clear terms which problem the code is trying to solve and how the solution solves it
+A user is created by sending a `POST` http request to the endpoint `<domain>/api/user`.
 
-We are more interested in your approach to solving a problem than the solution itself, so solve these challenges using any language and tech-stack you are comfortable in. Ideally, you are able to describe why a given technology was chosen.
+Expects a name and email address.
 
-There is no time limit for the challenges, but we do not expect you to spend more than three to four hours on a challenge. Don't be discouraged if you are unable to complete all the requirements. The challenge is only used to provide a basis for discussion at the following interview.
+### Create account
 
-### Evaluation
-The solution will be reviewed by an engineer and discussed at the following interview.
+An account is created by sending a `POST` http request to the endpoint `<domain>/api/account`.
 
-### Challenges
-1. [Account API](account.md)
+Expects a user id, name and balance.
+
+#### Requirements
+
+The user id must match the id of an existing user 
+
+### Transfer amount
+
+A transfer is created by sending a `POST` http request to the endpoint `<domain>/api/transfer`.
+
+Expects a from account id, a to account id and an amount.
+
+#### Requirements
+
+The two account ids must match the id of existing accounts and must not be the same.
+
+The amount must not exceed the balance of the 'from' account
+
+## Development
+
+The code is implemented in typescript using express.js. See `./src/express-gen-ts/README.md`.
+
+To ease development it is possible to use the api routes set up in `./bruno/code-challenge/*`.
+
+
+
+## Disclaimer
+
+The base structure for this repo has been generated with [express-generator-typescript](https://github.com/seanpmaxwell/express-generator-typescript)

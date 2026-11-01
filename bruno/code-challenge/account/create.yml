@@ -1,0 +1,26 @@
+info:
+  name: create
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{connection}}/api/account"
+  body:
+    type: json
+    data: |-
+      {
+        "account":{
+          "name": "{{$randomBankAccountName}}",
+          "user": "01a12230-a18c-7473-b1f1-88ed3ea1d5ae",
+          "balance": 200
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

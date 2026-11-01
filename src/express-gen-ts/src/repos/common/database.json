@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": "01a12230-a18b-721e-bf21-0ee836fa989d",
+      "name": "Sean Maxwell",
+      "email": "smaxwell@example.com",
+      "created": "2024-03-22T05:14:36.252Z"
+    },
+    {
+      "id": "01a12230-a18c-7473-b1f0-845016f412d3",
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "created": "2024-03-22T05:20:55.079Z"
+    },
+    {
+      "id": "01a12230-a18c-7473-b1f1-88ed3ea1d5ae",
+      "name": "Gordan Freeman",
+      "email": "nova@prospect.com",
+      "created": "2024-03-22T05:42:18.895Z"
+    },
+    {
+      "id": "01a19278-52cc-7160-911f-6da8f847f1f1",
+      "name": "Merle Klocko",
+      "email": "Kailey_Donnelly@example.org",
+      "created": "2026-10-31T14:58:41.484Z"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "01a192b2-40e2-763a-bd1e-7e712b920762",
+      "name": "Home Loan Account",
+      "user": "01a12230-a18c-7473-b1f0-845016f412d3",
+      "balance": 190,
+      "created": "2026-10-31T16:01:57.989Z"
+    },
+    {
+      "id": "01a19638-40c9-7038-a287-60b95611eede",
+      "name": "Savings Account",
+      "user": "01a12230-a18c-7473-b1f1-88ed3ea1d5ae",
+      "balance": 210,
+      "created": "2026-11-01T08:27:11.436Z"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "01a19638-d341-7226-861e-c7767e0dd39d",
+      "from": "01a192b2-40e2-763a-bd1e-7e712b920762",
+      "to": "01a19638-40c9-7038-a287-60b95611eede",
+      "amount": 10,
+      "created": "2026-11-01T08:27:48.929Z"
+    },
+    {
+      "id": "01a19651-aa47-738b-845a-6fcefc31ef20",
+      "from": "01a192b2-40e2-763a-bd1e-7e712b920762",
+      "to": "01a19638-40c9-7038-a287-60b95611eede",
+      "amount": 10,
+      "created": "2026-11-01T08:54:56.842Z"
+    }
+  ]
+}

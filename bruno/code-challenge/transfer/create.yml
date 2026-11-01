@@ -1,0 +1,26 @@
+info:
+  name: create
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{connection}}/api/transfer"
+  body:
+    type: json
+    data: |-
+      {
+        "transfer":{
+          "from": "01a192b2-40e2-763a-bd1e-7e712b920762",
+          "to": "01a19638-40c9-7038-a287-60b95611eede",
+          "amount": 300
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

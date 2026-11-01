@@ -1,0 +1,11 @@
+name: local
+variables:
+  - name: domain
+    value: localhost:3000
+    description: ""
+  - name: protocol
+    value: http://
+    description: ""
+  - name: connection
+    value: "{{protocol}}{{domain}}"
+    description: ""
